@@ -31,35 +31,6 @@
 
 <p>Click on your preferred hitman below to schedule a job</p>
 
-<!--table mat-table [dataSource]="hitmen">
-  <ng-container matColumnDef="Alias">
-    <th mat-header-cell *matHeaderCellDef>Alias</th>
-    <td mat-cell *matCellDef="let hitmen" [routerLink]="['/appointment']">{{ hitmen.alias }}</td>
-  </ng-container>
-
-  <ng-container matColumnDef="Hits">
-    <th mat-header-cell *matHeaderCellDef>Hits</th>
-    <td mat-cell *matCellDef="let hitmen" [routerLink]="['/appointment']">{{ hitmen.hits }}</td>
-  </ng-container>
-
-  <ng-container matColumnDef="Speciality">
-    <th mat-header-cell *matHeaderCellDef>Speciality</th>
-    <td mat-cell *matCellDef="let hitmen" [routerLink]="['/appointment']">{{ hitmen.speciality }}</td>
-  </ng-container>
-
-  <ng-container matColumnDef="Cost">
-    <th mat-header-cell *matHeaderCellDef>Cost</th>
-    <td mat-cell *matCellDef="let hitmen" [routerLink]="['/appointment']">{{ hitmen.cost }}</td>
-  </ng-container>
-
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-</table-->
-
-<mat-form-field>
-  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
-</mat-form-field>
-
 <table mat-table [dataSource]="hitmen">
   <ng-container matColumnDef="Alias">
     <th mat-header-cell *matHeaderCellDef>Alias</th>
