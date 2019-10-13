@@ -8,7 +8,7 @@ CREATE TABLE HITMEN
     Contact_Number VARCHAR2(50),
     Successful_Hits NUMBER(3),
     Speciality VARCHAR2(50),
-    Hit_Rate_Cost DECIMAL(6,2)
+    Hit_Rate_Cost DECIMAL(8,2)
 );
 
 /* Creating the Hitmen_Client table */
@@ -29,21 +29,21 @@ CREATE TABLE CLIENTS
     Client_FName VARCHAR2(50),
     Client_LName VARCHAR2(50),
     Client_Region VARCHAR2(50),
-    Client_Number NUMBER(10),
-    Client_Total_Debt DECIMAL(6,2)
+    Client_Number NUMBER(18),
+    Client_Total_Debt DECIMAL(8,2)
 );
 
 /* Creating the Client_net_cash table*/
 CREATE TABLE CLIENT_NET_CASH
 (
     Net_Cash_ID NUMBER(13),
-    Month1_Income DECIMAL(6,2),
-    Month2_Income DECIMAL(6,2),
-    Month3_Income DECIMAL(6,2),
-    Month1_Expenses DECIMAL(6,2),
-    Month2_Expenses DECIMAL(6,2),
-    Month3_Expenses DECIMAL(6,2),
-    Average_3Month_Cashflow DECIMAL(6,2)
+    Month1_Income DECIMAL(8,2),
+    Month2_Income DECIMAL(8,2),
+    Month3_Income DECIMAL(8,2),
+    Month1_Expenses DECIMAL(8,2),
+    Month2_Expenses DECIMAL(8,2),
+    Month3_Expenses DECIMAL(8,2),
+    Average_3Month_Cashflow DECIMAL(8,2)
 );
 
 /* Creating the Payments*/
@@ -51,7 +51,7 @@ CREATE TABLE PAYMENTS
 (
     Payment_ID NUMBER(13),
     Client_ID NUMBER(13),
-    Payment_Amount DECIMAL(6,2),
+    Payment_Amount DECIMAL(8,2),
     Payment_Date DATE
 );
 
@@ -67,8 +67,8 @@ CREATE TABLE Loan_Options
 (
     Loan_ID NUMBER(13),
     Loan_Name VARCHAR2(25),
-    Loan_Amount DECIMAL(6,2),
-    Total_Payback DECIMAL(6,2)
+    Loan_Amount DECIMAL(8,2),
+    Total_Payback DECIMAL(8,2)
 );
 
 /* Creating the CLIENT_DEBT_HISTORY table*/
@@ -76,8 +76,8 @@ CREATE TABLE CLIENT_DEBT_HISTORY
 (
     History_ID NUMBER(13),
     Client_ID NUMBER(13) NOT NULL,
-    Total_Debt DECIMAL(6,2),
-    Total_Paid_Debt DECIMAL(6,2)
+    Total_Debt DECIMAL(8,2),
+    Total_Paid_Debt DECIMAL(8,2)
 );
 
 /* Creating the CLIENT_LOAN table*/
@@ -85,7 +85,7 @@ CREATE TABLE CLIENT_LOAN
 (
     Loan_ID NUMBER(13),
     Collateral VARCHAR2(250),
-    Amt_Paid DECIMAL(6,2),
+    Amt_Paid DECIMAL(8,2),
     Loan_Start_Date DATE,
     Loan_End_Date DATE
 );

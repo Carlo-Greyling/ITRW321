@@ -1,0 +1,51 @@
+client_id,loan_id,hitman_id,history_id,net_cash_id,client_fname,client_lname,client_region,client_number,client_total_debt
+1,11,18,73,38,Missy,Haslewood,Saint-Flour,7867550777,81899.45
+2,20,82,70,82,Angeli,Timms,Idritsa,1989188381,791748.0
+3,15,60,69,50,Elenore,Dobbyn,Mingyuedian,1415973999,125892.7
+4,21,92,81,22,Barthel,Ferminger,Aianí,6842825952,172806.63
+5,31,41,64,69,Mattias,Hollingshead,Jiaozhou,6964704259,561401.5
+6,39,68,37,92,Quill,McGhee,Izazi,5795876810,296718.39
+7,39,9,44,83,Therese,Dumsday,Laholm,3889159719,102239.22
+8,15,24,63,92,Julieta,Albery,Gjinoc,2975651686,257086.64
+9,19,50,5,91,Wynnie,Osburn,Nanshi,9139116730,804094.77
+10,36,99,83,4,Charmian,Adel,Kurortnyy,3469201778,542091.78
+11,22,65,65,15,Cherish,Alesio,Kyjov,5304953150,311954.18
+12,39,12,36,30,Hilliary,Fosdyke,Licupis,2945311769,845596.65
+13,41,87,15,94,Carroll,Steggals,Alegrete,4926980418,334932.88
+14,29,87,94,76,Tonia,Yarrington,Vanino,3481806755,147644.4
+15,20,74,80,95,Roley,Millican,Būrewāla,1902305838,783005.64
+16,14,55,53,58,Sheree,McFarlane,Núi Đối,6954392915,946508.0
+17,35,48,24,67,Melisa,Thresh,Dagup,3139233361,354242.81
+18,23,7,2,50,Kali,Mounsie,Curahnongko,5939167179,516477.12
+19,8,89,84,30,Vinnie,Giannoni,Jequitinhonha,5534622292,338785.0
+20,28,23,9,54,Silva,Ousley,Sembungin,3517927591,380466.85
+21,32,61,2,89,Marta,Hiddsley,Jiujie,4156507373,639122.95
+22,6,71,56,17,Krissie,Chimienti,Belz,9427078500,279478.21
+23,20,72,67,34,Agnesse,Grzegorzewicz,Septfontaines,5323144912,384759.02
+24,19,91,57,95,Elsa,Trahearn,Longos,4809740008,831234.6
+25,2,39,31,48,Arielle,Swadon,Vitória,5352734213,11871.06
+26,49,95,9,91,Ingaborg,Penhale,Muang Xay,8926104520,925555.55
+27,13,16,21,93,Stafford,Dearn,Saint-Pierre-Montlimart,7949227009,331952.98
+28,31,8,37,28,Reiko,Union,Rędziny,1585317769,835305.26
+29,43,90,19,38,Katheryn,Grindley,Somanda,6505417748,421778.34
+30,8,72,91,99,Tab,Monck,Cuntan,8571947348,661261.36
+31,23,19,73,80,Viola,Elton,Nāḩiyat as Sab‘ Biyār,8748200004,267553.36
+32,3,50,27,40,Stanley,Butterly,Canha,8364830223,627950.91
+33,49,69,62,20,Elmo,Fransman,Los Aquijes,6584927627,385185.01
+34,25,37,49,23,Crissy,Cartan,Lyon,4972841008,374676.47
+35,20,4,83,73,Mikol,Shinn,Daja,1936483546,956438.0
+36,24,74,36,10,Rozanna,Fraulo,At Tall al Kabīr,8864380683,115008.06
+37,47,100,55,44,Carla,Moralis,Boavista,6979727056,800773.1
+38,5,86,49,95,Prinz,Sugars,Sacanche,3123468576,933910.97
+39,15,12,21,64,Beitris,Keling,Ananindeua,5519394786,200625.04
+40,42,31,59,74,Salvador,Chidlow,Domont,6423395739,109538.93
+41,5,83,96,91,Brocky,Canedo,Boro,9312688012,687693.0
+42,41,47,45,64,Codi,Nezey,Linköping,2821127882,349463.08
+43,46,96,100,71,Clementia,Sulley,Anto,6664886438,219213.14
+44,24,48,47,40,Jenelle,Byllam,’Unābah,9762296536,840096.83
+45,33,44,59,24,Hilary,de Banke,Gunung Talang,8754025078,818435.11
+46,27,81,29,46,Anitra,Jolly,Chuchkovo,9992736585,676261.05
+47,1,6,83,63,Tedman,Pudney,Bielawa,2167999884,694750.59
+48,50,64,30,27,Ofella,Gurling,Nasīrābād,5364829080,181945.47
+49,40,49,93,16,Ashley,Kerry,Ōkawara,6685685486,843493.75
+50,42,76,99,40,Valerye,Shelvey,Kampungtengah,4799449476,214157.65
