@@ -127,31 +127,37 @@ ADD CONSTRAINT client_loan_id_pk
 PRIMARY KEY(Loan_ID);
 
                                             /* Adding the Foreign Keys */
+/* PAYMENTS Foreign Key Constraints */
 ALTER TABLE PAYMENTS
 ADD CONSTRAINT pay_client_id_fk
 FOREIGN KEY(Client_ID)
 REFERENCES CLIENT_PAYMENTS(Client_ID);
 
+/* CLIENTS Foreign Key Constraints */
 ALTER TABLE CLIENTS
 ADD CONSTRAINT loan_id_fk
 FOREIGN KEY(Loan_ID)
 REFERENCES CLIENT_LOAN(Loan_ID);
 
+/* CLIENTS Foreign Key Constraints */
 ALTER TABLE CLIENTS
 ADD CONSTRAINT hitman_id_fk
 FOREIGN KEY(Hitman_ID)
 REFERENCES HITMEN_CLIENT(Hitman_ID);
 
+/* CLIENTS Foreign Key Constraints */
 ALTER TABLE CLIENTS
 ADD CONSTRAINT history_id_fk
 FOREIGN KEY(History_ID)
 REFERENCES CLIENT_DEBT_HISTORY(History_ID);
 
+/* CLIENTS Foreign Key Constraints */
 ALTER TABLE CLIENTS
 ADD CONSTRAINT net_cash_id_fk
 FOREIGN KEY(Net_Cash_ID)
 REFERENCES CLIENT_NET_CASH(Net_Cash_ID);
 
+/* CLIENT_DEBT_HISTORY Foreign Key Constraints */
 ALTER TABLE CLIENT_DEBT_HISTORY
 ADD CONSTRAINT client_id_fk
 FOREIGN KEY(Client_ID)
@@ -175,6 +181,7 @@ ALTER TABLE HITMEN_CLIENT
 ADD CONSTRAINT bridge_client_id_fk
 FOREIGN KEY(Client_ID)
 REFERENCES CLIENTS(Client_ID);
+                                                /* END of Bridge Table */
 
                                             /* Bridge Table CLIENT_PAYMENTS */
 ALTER TABLE CLIENT_PAYMENTS
@@ -194,3 +201,4 @@ ALTER TABLE CLIENT_PAYMENTS
 ADD CONSTRAINT bridge_payment_id_fk
 FOREIGN KEY(Payment_ID)
 REFERENCES PAYMENTS(Payment_ID);
+                                                /* END of Bridge Table */
