@@ -5,7 +5,7 @@ CREATE TABLE HITMEN
     Hitman_ID Number(13),
     Hitman_Alias VARCHAR2(50),
     Region VARCHAR2(50),
-    Contact_Number VARCHAR2(50),
+    Contact_Number VARCHAR2(10),
     Successful_Hits NUMBER(3),
     Speciality VARCHAR2(50),
     Hit_Rate_Cost DECIMAL(6,2)
