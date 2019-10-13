@@ -1,0 +1,70 @@
+.headText {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+.skull {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  height: 150px;
+  width: 150px;
+}
+
+hr {
+  border: 1px solid black;
+}
+
+.schedApp {
+  background-color: darkred;
+  border: darkred;
+  color: white;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input {
+  background-color: white;
+}
+
+mat-select {
+  background-color: white;
+}
+
+mat-form-field {
+  display: block;
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 5px;
+}
+
+select {
+  display: block;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2px;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  background-color: black;
+  color: red;
+  padding-bottom: 150px;
+}
+
+th {
+  width: 30%;
+}
+
+button {
+  padding: 5px;
+  width: 15%;
+}
