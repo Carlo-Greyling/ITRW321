@@ -1,0 +1,101 @@
+hitman_id,hitman_alias,region,contact_number,successful_hits,speciality,hit_rate_cost
+1,Tobin,Eastern Cape,1692814280,47,Blackmail,9705.31
+2,Caresse,Gauteng,8695156906,1,Torture,3342.3
+3,Alidia,Kwazulu Natal,7418656792,88,Torture,2990.0
+4,Aurlie,Limpopo,1743268182,186,Stalking,6998.54
+5,Sanders,Kwazulu Natal,7223811943,131,Stalking,5679.12
+6,Faber,Limpopo,7316655940,78,Intimidation,12536.89
+7,Irvine,Northern Cape,5148560746,105,Blackmail,5984.82
+8,Blair,Western Cape,1347641418,61,Torture,3319.76
+9,Jessalin,Gauteng,4791684597,70,Intimidation,6678.27
+10,Koressa,Limpopo,8417997854,186,Murder,14699.68
+11,Reid,North West,7757218588,194,Torture,8242.68
+12,Carmella,Mpumalanga,6481943544,83,Murder,9346.35
+13,Pamella,Eastern Cape,5755272499,86,Stalking,2967.44
+14,Crissie,Gauteng,2547822018,59,Stalking,11254.85
+15,Udall,Mpumalanga,1885653853,196,Murder,3840.91
+16,Marthe,Limpopo,8978476364,117,Blackmail,8121.04
+17,Skip,Mpumalanga,2242801631,24,Stalking,12619.38
+18,Ryun,Limpopo,8273448587,23,Torture,11205.73
+19,Eddy,Northern Cape,6767982962,72,Intimidation,7442.17
+20,Maddie,Northern Cape,9209071615,8,Murder,12516.19
+21,Ina,Northern Cape,7532603255,125,Stalking,2941.92
+22,Jone,North West,3522129295,70,Blackmail,13699.64
+23,Tammie,Kwazulu Natal,9132162124,2,Stalking,11481.33
+24,Kimmie,Limpopo,5262637375,22,Torture,7460.62
+25,Bobbee,Freestate,9589800156,48,Stalking,5489.49
+26,Maryanna,Mpumalanga,5356206087,105,Intimidation,13762.73
+27,Bernie,North West,6787862158,115,Torture,12647.94
+28,Paten,North West,1037289805,200,Murder,12872.54
+29,Jock,Gauteng,6721020336,54,Torture,5835.94
+30,Britte,Mpumalanga,2488568621,172,Blackmail,4896.39
+31,Katharine,Northern Cape,5445864454,30,Torture,9809.28
+32,Siana,Western Cape,6355639618,131,Torture,6920.58
+33,Brian,Freestate,5814800034,133,Intimidation,12081.06
+34,Kay,Gauteng,8617319168,96,Torture,4112.56
+35,Dionne,Mpumalanga,4063958850,55,Torture,9487.81
+36,Susanna,Freestate,9651457754,26,Blackmail,3526.15
+37,Meghann,Northern Cape,6455957153,189,Blackmail,4502.38
+38,Alys,Freestate,4238865584,43,Blackmail,3746.26
+39,Vanna,Western Cape,2747623830,72,Torture,9049.26
+40,Lynnelle,Limpopo,6271875935,74,Intimidation,7592.19
+41,Melvin,North West,9876316989,51,Murder,5536.94
+42,Aleksandr,Western Cape,6348783346,69,Murder,13718.82
+43,Ethelind,Limpopo,2139935670,51,Murder,5396.95
+44,Jackie,Freestate,8113019307,155,Intimidation,12226.91
+45,Elane,Northern Cape,4135819761,27,Torture,12428.99
+46,Chic,Limpopo,2395554676,55,Blackmail,11652.05
+47,Dall,Gauteng,5708054390,87,Blackmail,8363.75
+48,Jaine,Western Cape,6798825182,46,Intimidation,4942.59
+49,Francisco,Eastern Cape,9277934302,119,Stalking,7493.52
+50,Thibaud,Gauteng,5834558156,170,Murder,13509.81
+51,Walt,Limpopo,2634605736,45,Murder,7902.29
+52,Liv,North West,1032602409,128,Murder,10368.48
+53,Michele,Mpumalanga,3035146885,71,Murder,4282.47
+54,Graeme,Eastern Cape,7441434368,73,Blackmail,7909.15
+55,Virgina,Limpopo,7306719763,78,Murder,7060.34
+56,Ezechiel,Western Cape,7022893833,169,Blackmail,6452.52
+57,Menard,Northern Cape,7866894382,120,Intimidation,6383.48
+58,Delia,Gauteng,6805155142,60,Blackmail,8253.3
+59,Pepita,Western Cape,2118684688,99,Blackmail,13770.21
+60,Arnuad,Gauteng,3703022157,19,Murder,8175.09
+61,Erhard,Northern Cape,8654305642,92,Blackmail,11441.59
+62,Siana,Limpopo,4441443752,82,Intimidation,4461.34
+63,Beatrice,Limpopo,5498992563,185,Stalking,8351.01
+64,Nedi,Eastern Cape,5074839912,54,Murder,7028.89
+65,Tamiko,Western Cape,1546506594,80,Torture,6794.91
+66,Tomkin,North West,6494895938,108,Blackmail,14415.73
+67,Lazare,Eastern Cape,6613786085,103,Blackmail,12750.55
+68,Maurits,Limpopo,9356547950,182,Murder,12164.51
+69,Rochell,Western Cape,3145178162,156,Intimidation,10362.13
+70,Mable,Gauteng,8595873667,158,Torture,7643.53
+71,Chrystel,Western Cape,8367019281,32,Blackmail,11975.27
+72,Moise,Western Cape,8377968858,188,Blackmail,5047.36
+73,Kerwinn,Gauteng,9845122326,143,Blackmail,7516.7
+74,Loy,Eastern Cape,5956489877,162,Intimidation,14216.77
+75,Erna,Freestate,5537483580,36,Murder,4069.86
+76,Andromache,Mpumalanga,9423078421,156,Torture,11033.35
+77,Marshal,Western Cape,1519255442,134,Stalking,8683.4
+78,Bengt,Limpopo,6599110422,89,Intimidation,12972.15
+79,Valentina,Western Cape,9989847981,30,Stalking,3996.07
+80,Ricky,Freestate,3266628215,131,Stalking,4579.17
+81,Tony,Mpumalanga,1808814118,36,Blackmail,10506.04
+82,Bea,Limpopo,8936700991,76,Murder,4944.89
+83,Andris,Kwazulu Natal,3798880580,6,Torture,4745.1
+84,Boony,Gauteng,6153706918,35,Intimidation,9214.6
+85,Bobby,Limpopo,6612012161,145,Murder,5692.63
+86,Carolyn,Mpumalanga,5233706957,172,Blackmail,6205.78
+87,Bunny,Western Cape,7821309740,178,Blackmail,3054.72
+88,Helen,North West,7988947198,80,Stalking,3199.08
+89,Felizio,Freestate,1426391792,108,Intimidation,3837.14
+90,Celestyn,Eastern Cape,1505927927,195,Stalking,12539.5
+91,Cindee,Mpumalanga,6302419031,68,Murder,8044.59
+92,Wilfred,Limpopo,8991459212,56,Intimidation,3217.58
+93,Newton,Freestate,3145609096,2,Stalking,8017.62
+94,Ailis,North West,5068853043,156,Intimidation,12970.11
+95,Livvie,Mpumalanga,3605416526,132,Murder,14729.67
+96,Urbain,North West,1255520796,150,Blackmail,13467.82
+97,Charline,Gauteng,1644423724,183,Intimidation,6817.38
+98,Hastie,Mpumalanga,4059682922,11,Stalking,4703.26
+99,Ailee,Northern Cape,5719171876,33,Stalking,4972.09
+100,Solomon,Kwazulu Natal,2308789854,94,Stalking,12227.75
