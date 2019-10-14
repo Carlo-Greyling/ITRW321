@@ -294,7 +294,13 @@ DROP TABLE PAYMENTS CASCADE CONSTRAINTS;
 
 CREATE TABLE Fact_Twenty_Percent_Debt AS
 (
-    SELECT c.Client_ID AS Client_ID, c.Client_FName + c.Client_LName AS Client_Names, c.Client_Region AS Client_Region, c.Client_Total_Debt AS Client_Total_Debt, 100 / c.Client_Total_Debt * l.Amt_Paid AS Client_Debt_Percentage
+    SELECT c.Client_ID AS Client_ID, 
+    c.Client_FName AS FName, 
+    c.Client_LName AS LName, 
+    c.Client_Region AS Client_Region, 
+    c.Client_Total_Debt AS Client_Total_Debt, 
+    ROUND((100 / c.Client_Total_Debt * l.Amt_Paid), 2) AS Client_Debt_Percentage,
+    EXTRACT(MONTH FROM (SELECT SYSDATE FROM DUAL)) - EXTRACT(MONTH FROM l.Loan_Start_Date) AS Months_Behind
     FROM CLIENTS c
     JOIN CLIENT_LOAN l
     ON (c.Loan_ID = l.Loan_ID)
@@ -303,7 +309,7 @@ CREATE TABLE Fact_Twenty_Percent_Debt AS
 
 CREATE TABLE Fact_Fifty_Percent_Debt AS
 (
-    SELECT c.Client_ID AS Client_ID, c.Client_FName + c.Client_LName AS Client_Names, c.Client_Region AS Client_Region, c.Client_Total_Debt AS Client_Total_Debt, 100 / c.Client_Total_Debt * l.Amt_Paid AS Client_Debt_Percentage
+    SELECT c.Client_ID AS Client_ID, c.Client_FName AS FName, c.Client_LName AS LName, c.Client_Region AS Client_Region, c.Client_Total_Debt AS Client_Total_Debt, ROUND((100 / c.Client_Total_Debt * l.Amt_Paid), 2) AS Client_Debt_Percentage
     FROM CLIENTS c
     JOIN CLIENT_LOAN l
     ON (c.Loan_ID = l.Loan_ID)
@@ -312,9 +318,9 @@ CREATE TABLE Fact_Fifty_Percent_Debt AS
 
 CREATE TABLE Fact_Eighty_Percent_Debt AS
 (
-    SELECT c.Client_ID AS Client_ID, c.Client_FName + c.Client_LName AS Client_Names, c.Client_Region AS Client_Region, c.Client_Total_Debt AS Client_Total_Debt, 100 / c.Client_Total_Debt * l.Amt_Paid AS Client_Debt_Percentage
+    SELECT c.Client_ID AS Client_ID, c.Client_FName AS FName, c.Client_LName AS LName, c.Client_Region AS Client_Region, c.Client_Total_Debt AS Client_Total_Debt, ROUND((100 / c.Client_Total_Debt * l.Amt_Paid), 2) AS Client_Debt_Percentage
     FROM CLIENTS c
     JOIN CLIENT_LOAN l
     ON (c.Loan_ID = l.Loan_ID)
-    WHERE c.Client_Total_Debt > 80
+    WHERE 100 / c.Client_Total_Debt * l.Amt_Paid BETWEEN 80 AND 100
 );
