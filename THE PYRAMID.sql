@@ -218,7 +218,7 @@ CREATE TABLE Fact_Twenty_Percent_Debt AS
     c.Client_Region AS Client_Region, 
     c.Client_Total_Debt AS Client_Total_Debt, 
     ROUND((100 / c.Client_Total_Debt * l.Amt_Paid), 2) AS Client_Debt_Percentage,
-    EXTRACT(MONTH FROM (SELECT SYSDATE FROM DUAL)) - EXTRACT(MONTH FROM l.Loan_Start_Date) AS Months_Behind
+    EXTRACT(MONTH FROM (SELECT SYSDATE FROM DUAL)) - EXTRACT(MONTH FROM l.Loan_Start_Date) AS Months_Elapsed
     FROM CLIENTS c
     JOIN CLIENT_LOAN l
     ON (c.Loan_ID = l.Loan_ID)
@@ -233,7 +233,7 @@ CREATE TABLE Fact_Fifty_Percent_Debt AS
     c.Client_Region AS Client_Region, 
     c.Client_Total_Debt AS Client_Total_Debt, 
     ROUND((100 / c.Client_Total_Debt * l.Amt_Paid), 2) AS Client_Debt_Percentage,
-    EXTRACT(MONTH FROM (SELECT SYSDATE FROM DUAL)) - EXTRACT(MONTH FROM l.Loan_Start_Date) AS Months_Behind
+    EXTRACT(MONTH FROM (SELECT SYSDATE FROM DUAL)) - EXTRACT(MONTH FROM l.Loan_Start_Date) AS Months_Elapsed
     FROM CLIENTS c
     JOIN CLIENT_LOAN l
     ON (c.Loan_ID = l.Loan_ID)
@@ -248,12 +248,13 @@ CREATE TABLE Fact_Eighty_Percent_Debt AS
     c.Client_Region AS Client_Region, 
     c.Client_Total_Debt AS Client_Total_Debt, 
     ROUND((100 / c.Client_Total_Debt * l.Amt_Paid), 2) AS Client_Debt_Percentage,
-    EXTRACT(MONTH FROM (SELECT SYSDATE FROM DUAL)) - EXTRACT(MONTH FROM l.Loan_Start_Date) AS Months_Behind
+    EXTRACT(MONTH FROM (SELECT SYSDATE FROM DUAL)) - EXTRACT(MONTH FROM l.Loan_Start_Date) AS Months_Elapsed
     FROM CLIENTS c
     JOIN CLIENT_LOAN l
     ON (c.Loan_ID = l.Loan_ID)
     WHERE 100 / c.Client_Total_Debt * l.Amt_Paid BETWEEN 80 AND 100
 );
+
                                                 /*DROP FACTUAL TABLES */
 DROP TABLE FACT_HIT_BY_PROVINCE;
 
