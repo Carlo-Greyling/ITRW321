@@ -202,6 +202,96 @@ ADD CONSTRAINT bridge_payment_id_fk
 FOREIGN KEY(Payment_ID)
 REFERENCES PAYMENTS(Payment_ID);
                                                 /* END of Bridge Table */
+                                                /*CREATION OF FACTUAL TABLES */
+CREATE TABLE FACT_HIT_BY_PROVINCE
+(
+    Province VARCHAR2(50),
+    Total_Hits Number(13)
+    
+);
+                                                /*DROP FACTUAL TABLES */
+DROP TABLE FACT_HIT_BY_PROVINCE;
+
+                                                /* INSERT DATA INTO FACTUAL TABLES 
+                                                
+/* FACT_HITS_BY_PROVINCE */
+INSERT INTO FACT_HIT_BY_PROVINCE
+    (Province, Total_Hits)
+VALUES (
+    (SELECT DISTINCT region FROM hitmen WHERE region = 'North West'),
+    (SELECT COUNT(Successful_Hits) FROM hitmen WHERE region = 'North West')
+    );
+    
+INSERT INTO FACT_HIT_BY_PROVINCE
+    (Province, Total_Hits, Clients)
+VALUES (
+    (SELECT DISTINCT region FROM hitmen WHERE region = 'Freestate'),
+    (SELECT COUNT(Successful_Hits) FROM hitmen WHERE region = 'Freestate')
+    );
+    
+INSERT INTO FACT_HIT_BY_PROVINCE
+    (Province, Total_Hits)
+VALUES (
+    (SELECT DISTINCT region FROM hitmen WHERE region = 'Limpopo'),
+    (SELECT COUNT(Successful_Hits) FROM hitmen WHERE region = 'Limpopo')
+    );
+    
+INSERT INTO FACT_HIT_BY_PROVINCE
+    (Province, Total_Hits)
+VALUES (
+    (SELECT DISTINCT region FROM hitmen WHERE region = 'Mpumalanga'),
+    (SELECT COUNT(Successful_Hits) FROM hitmen WHERE region = 'Mpumalanga')
+    );
+    
+INSERT INTO FACT_HIT_BY_PROVINCE
+    (Province, Total_Hits)
+VALUES (
+    (SELECT DISTINCT region FROM hitmen WHERE region = 'Gauteng'),
+    (SELECT COUNT(Successful_Hits) FROM hitmen WHERE region = 'Gauteng')
+    );
+    
+INSERT INTO FACT_HIT_BY_PROVINCE
+    (Province, Total_Hits)
+VALUES (
+    (SELECT DISTINCT region FROM hitmen WHERE region = 'Kwazulu Natal'),
+    (SELECT COUNT(Successful_Hits) FROM hitmen WHERE region = 'Kwazulu Natal')
+    );
+    
+INSERT INTO FACT_HIT_BY_PROVINCE
+    (Province, Total_Hits)
+VALUES (
+    (SELECT DISTINCT region FROM hitmen WHERE region = 'Eastern Cape'),
+    (SELECT COUNT(Successful_Hits) FROM hitmen WHERE region = 'Eastern Cape')
+    );
+    
+INSERT INTO FACT_HIT_BY_PROVINCE
+    (Province, Total_Hits)
+VALUES (
+    (SELECT DISTINCT region FROM hitmen WHERE region = 'Western Cape'),
+    (SELECT COUNT(Successful_Hits) FROM hitmen WHERE region = 'Western Cape')
+    );
+    
+INSERT INTO FACT_HIT_BY_PROVINCE
+    (Province, Total_Hits)
+VALUES (
+    (SELECT DISTINCT region FROM hitmen WHERE region = 'Northern Cape'),
+    (SELECT COUNT(Successful_Hits) FROM hitmen WHERE region = 'Northern Cape')
+    );*/
+    
+/* DROPPING ALL TABLES*/
+DROP TABLE FACT_HIT_BY_PROVINCE CASCADE CONSTRAINTS;
+
+
+DROP TABLE CLIENTS CASCADE CONSTRAINTS;
+DROP TABLE CLIENT_DEBT_HISTORY CASCADE CONSTRAINTS;
+DROP TABLE CLIENT_LOAN CASCADE CONSTRAINTS;
+DROP TABLE CLIENT_NET_CASH CASCADE CONSTRAINTS;
+DROP TABLE CLIENT_PAYMENTS CASCADE CONSTRAINTS;
+DROP TABLE HITMEN CASCADE CONSTRAINTS;
+DROP TABLE HITMEN_CLIENT CASCADE CONSTRAINTS;
+DROP TABLE LOAN_OPTIONS CASCADE CONSTRAINTS;
+DROP TABLE PAYMENTS CASCADE CONSTRAINTS;
+
 CREATE TABLE Fact_Twenty_Percent_Debt AS
 (
     SELECT c.Client_ID AS Client_ID, c.Client_FName + c.Client_LName AS Client_Names, c.Client_Region AS Client_Region, c.Client_Total_Debt AS Client_Total_Debt, 100 / c.Client_Total_Debt * l.Amt_Paid AS Client_Debt_Percentage
