@@ -255,11 +255,160 @@ CREATE TABLE Fact_Eighty_Percent_Debt AS
     WHERE 100 / c.Client_Total_Debt * l.Amt_Paid BETWEEN 80 AND 100
 );
 
+CREATE TABLE FACT_INCOME_BY_REGION
+(
+    Province VARCHAR2(50),
+    Total_Income Number(13)
+);
+
+CREATE TABLE FACT_LOAN_LOSS_WHEN_HIT AS
+(
+    SELECT c.client_id AS Client_ID, c.client_total_debt AS Client_Current_Dept, c.Client_Total_Dept - l.amt_paid + h.hit_rate_cost AS Total_Loss_per_Hit
+    FROM CLIENTS c
+    JOIN CLIENT_LOAN l
+    ON (c.Loan_ID = l.Loan_ID)
+    LEFT JOIN HITMEN h ON (c.loan_ID = h.hitman_id)
+);
+
+
+/* Create fact table for FACT_DEPT_HISTORY */
+CREATE TABLE FACT_DEPT_HISTORY
+(
+Client_ID NUMBER(13) NOT NULL,
+Client_Region VARCHAR2(50),
+Client_Total_Debt DECIMAL(8,2)
+);
+
+/* Create Fact table for FACT_LOAN_HISTORY */
+CREATE TABLE FACT_LOAN_HISTORY
+(
+Client_ID NUMBER(13) NOT NULL,
+Loan_Date DATE,
+Loan_Amount DECIMAL(8,2),
+Client_FName VARCHAR2(50),
+Client_LName VARCHAR2(50),
+Client_Region VARCHAR2(50)
+);
+
                                                 /*DROP FACTUAL TABLES */
 DROP TABLE FACT_HIT_BY_PROVINCE;
 
                                                 /* INSERT DATA INTO FACTUAL TABLES 
-                                                
+/* Fact_Income_By_Region */
+INSERT INTO FACT_INCOME_BY_REGION
+    (Province, Total_Income)
+VALUES (
+    (SELECT DISTINCT region FROM clients WHERE region = 'North West'),
+    (SELECT SUM(Average_3Month_Cashflow) FROM client_net_cash WHERE region= 'North West')/*client_net_cash moet seker ge merge word met iets om te kan werk? */
+    );
+
+INSERT INTO FACT_INCOME_BY_REGION
+    (Province, Total_Income)
+VALUES (
+    (SELECT DISTINCT region FROM clients WHERE region = 'Freestate '),
+    (SELECT SUM(Average_3Month_Cashflow) FROM client_net_cash WHERE region = 'Freestate')
+    );
+
+INSERT INTO FACT_INCOME_BY_REGION
+    (Province, Total_Income)
+VALUES (
+    (SELECT DISTINCT region FROM clients WHERE region = 'Limpopo'),
+    (SELECT SUM(Average_3Month_Cashflow) FROM client_net_cash WHERE region = 'Limpopo')
+    );
+
+INSERT INTO FACT_INCOME_BY_REGION
+    (Province, Total_Income)
+VALUES (
+    (SELECT DISTINCT region FROM clients WHERE region = 'Mpumalanga'),
+    (SELECT SUM(Average_3Month_Cashflow) FROM client_net_cash WHERE region = 'Mpumalanga')
+    );
+
+INSERT INTO FACT_INCOME_BY_REGION
+    (Province, Total_Income)
+VALUES (
+    (SELECT DISTINCT region FROM clients WHERE region = 'Gauteng'),
+    (SELECT SUM(Average_3Month_Cashflow) FROM client_net_cash WHERE region = 'Gauteng')
+    );
+
+INSERT INTO FACT_INCOME_BY_REGION
+    (Province, Total_Income)
+VALUES (
+    (SELECT DISTINCT region FROM clients WHERE region = 'Kwazulu Natal'),
+    (SELECT SUM(Average_3Month_Cashflow) FROM client_net_cash WHERE region = 'Kwazulu Natal')
+    );
+
+INSERT INTO FACT_INCOME_BY_REGION
+    (Province, Total_Income)
+VALUES (
+    (SELECT DISTINCT region FROM clients WHERE region = 'Eastern Cape'),
+    (SELECT SUM(Average_3Month_Cashflow) FROM client_net_cash WHERE region = 'Eastern Cape')
+    );
+
+INSERT INTO FACT_INCOME_BY_REGION
+    (Province, Total_Income)
+VALUES (
+    (SELECT DISTINCT region FROM clients WHERE region = 'Western Cape'),
+    (SELECT SUM(Average_3Month_Cashflow) FROM client_net_cash WHERE region = 'Western Cape')
+    );
+
+INSERT INTO FACT_INCOME_BY_REGION
+    (Province, Total_Income)
+VALUES (
+    (SELECT DISTINCT region FROM clients WHERE region = 'Northern Cape'),
+    (SELECT SUM(Average_3Month_Cashflow) FROM client_net_cash WHERE region = 'Northern Cape')
+    );
+
+
+DROP TABLE FACT_INCOME_BY_REGION CASCADE CONSTRAINTS;
+
+/* Create fact table for DEBT HISTORY*/
+CREATE TABLE FACT_DEPT_HISTORY
+(
+    Client_ID NUMBER(13) NOT NULL,
+    Client_Region VARCHAR2(50),
+    Client_Total_Debt DECIMAL(8,2)
+);
+
+DROP TABLE FACT_DEPT_HISTORY;
+
+/* Data In Table */
+
+INSERT INTO FACT_DEPT_HISTORY
+(Client_ID, Client_Region, Client_Total_Dept)
+VALUES(
+(SELECT CLIENT_ID FROM CLIENTS),
+(SELECT CLIENT_TOTAL_DEPT FROM CLIENTS),
+(SELECT CLIENT_REGION FROM CLIENTS)
+);
+
+DROP TABLE FACT_DEPT_HISTORY CASCADE CONSTRAINTS;
+
+
+/* fact table to show client loan history*/
+
+CREATE TABLE FACT_LOAN_HISTORY
+(
+Client_ID NUMBER(13) NOT NULL,
+Client_Total_Debt DECIMAL(8,2),
+Client_FName VARCHAR2(50),
+Client_LName VARCHAR2(50),
+Client_Region VARCHAR2(50)
+);
+
+DROP TABLE FACT_LOAN_HISTORY;
+
+INSERT INTO FACT_DEPT_HISTORY
+(Client_ID, Client_Region, Client_Total_Dept, Client_FName, Client_LName)
+VALUES(
+(SELECT CLIENT_ID FROM CLIENTS),
+(SELECT CLIENT_TOTAL_DEPT FROM CLIENTS),
+(SELECT Client_FName FROM CLIENTS),
+(SELECT Client_LName FROM CLIENTS),
+(SELECT Client_Region FROM CLIENTS)
+);
+
+DROP TABLE FACT_LOAN_HISTORY CASCADE CONSTRAINTS;
+                                        
 /* FACT_HITS_BY_PROVINCE */
 INSERT INTO FACT_HIT_BY_PROVINCE
     (Province, Total_Hits)
